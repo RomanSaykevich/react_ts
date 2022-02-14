@@ -3,8 +3,8 @@ import {genreService} from "../../Services";
 
 export const getGenresFilterById = createAsyncThunk(
     'genresFilterSlice/getGenresFilterById',
-    async ({id,page})=>{
-        const genreFil = await genreService.getByIdFilter(id,page)
+    async ({id, page}) => {
+        const genreFil = await genreService.getByIdFilter(id, page)
         return genreFil
     }
 )

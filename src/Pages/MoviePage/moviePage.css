@@ -1,0 +1,21 @@
+.movie-page-full{
+    display: flex;
+}
+.movie-page-full2{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.movie-page-film{
+    display: flex;
+}
+.movie-page-btn{
+    display: flex;
+justify-content: space-around;
+    padding: 10px;
+}
+.btn-page{
+    background: #efefef;
+    color: currentColor;
+    border-radius: 40px;
+}

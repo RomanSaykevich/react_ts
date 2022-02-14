@@ -1,0 +1,20 @@
+.movie-list-full {
+    display: flex;
+    padding: 26px;
+    margin-bottom: 68px;
+}
+
+.movie-list-img {
+    border: solid 5px currentColor;
+}
+
+.movie-list-text {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.movie-list-text1 {
+    margin-left: 25px;
+}

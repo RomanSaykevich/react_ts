@@ -1,26 +1,28 @@
-import React from 'react';
+import {NavLink} from "react-router-dom";
 
 import {imageUrl300} from "../../Urls";
-import {NavLink} from "react-router-dom";
+import movieList from "./movieList.css"
 
 const MovieList = ({movie}) => {
 
-
-    const{id,poster_path, original_title, vote_average} = movie
+    const {id, poster_path, original_title, vote_average} = movie
 
     return (
-        <div>
+        <div className={'movie-list-full'}>
             <NavLink to={id.toString()} state={movie}>
 
-                <div><img src={imageUrl300 + poster_path} alt="photo"/></div>
+                <div className={'movie-list-img'}><img src={imageUrl300 + poster_path} alt="photo"/></div>
 
-            <div>
+                <div>
+                    <div className={'movie-list-text'}>
+                        <div>{original_title}</div>
+                        <div className={'movie-list-text1'}>{vote_average}</div>
+                    </div>
 
-                    <div>{original_title}</div>
-                    <div>{vote_average}</div>
+                </div>
 
-            </div>
             </NavLink>
+
         </div>
     );
 };

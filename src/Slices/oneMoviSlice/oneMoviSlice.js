@@ -13,7 +13,7 @@ export const getById = createAsyncThunk(
 );
 
 const initialState={
-    movieOne: []
+    movieOne: {}
 };
 
 const oneMoviSlice = createSlice({

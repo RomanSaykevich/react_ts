@@ -1,0 +1,34 @@
+.genre-movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("https://st.depositphotos.com/1555678/1276/i/950/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg") no-repeat;
+    color: #000000;
+}
+
+.genre-movie-img {
+    border: solid 5px #e5d9d9;
+}
+
+.genre-movie-over {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.genre-movie-btn {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.genre-movie-full {
+    color: #000000;
+
+}
+
+.genre-movie-page {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}

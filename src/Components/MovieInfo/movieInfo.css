@@ -1,0 +1,30 @@
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #030303;
+}
+
+.movie-info-img {
+    border: solid 5px #e5d9d9;
+}
+
+.movie-info-title {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.movie-info-sbor {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.movie-info-btn {
+    margin-top: 40px;
+    background: #efefef;
+    color: currentColor;
+    border-radius: 40px;
+}

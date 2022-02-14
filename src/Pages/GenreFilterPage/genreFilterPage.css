@@ -1,0 +1,28 @@
+.genre-filter-page {
+    display: flex;
+    height: 532px;
+
+}
+
+.genre-filter-page1 {
+    display: flex;
+
+}
+
+.genre-filter-page-full {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.genre-filter-page-btn {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.btn-genre {
+    background: #efefef;
+    color: currentColor;
+    border-radius: 40px;
+}

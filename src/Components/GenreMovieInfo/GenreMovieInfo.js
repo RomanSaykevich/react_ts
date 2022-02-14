@@ -5,7 +5,7 @@ import {NavLink, useParams} from "react-router-dom";
 import {getById} from "../../Slices";
 import {imageUrl500} from "../../Urls";
 import Collection from "../../Collection/Collection";
-import movieInfo from "./movieInfo.css"
+import genremovieinfo from './genremovieinfo.css'
 
 const MovieInfo = () => {
 
@@ -28,27 +28,37 @@ const MovieInfo = () => {
     }, [])
 
     return (
-        <div className={'movie-info'}>
-            <h1>{original_title}</h1>
 
-            <div className={'movie-info-img'}><img src={imageUrl500 + backdrop_path} alt="poster"/></div>
-            <div className={'movie-info-title'}><h4>{overview}</h4></div>
-            <div className={'movie-info-sbor'}>
+        <div className={'genre-movie-full'}>
+            <div className={'genre-movie-info'}>
+
+                <h1>{original_title}</h1>
+
+                <div className={'genre-movie-img'}><img src={imageUrl500 + backdrop_path} alt="poster"/></div>
+                <div className={'genre-movie-over'}><strong>{overview}</strong></div>
+            </div>
+
+            <div className={'genre-movie-page'}>
                 <div>
                     <div><strong>Release_date:</strong> {release_date}</div>
                     <div><strong>Vote_average:</strong> {vote_average}</div>
                     <div><strong>Vote_count:</strong> {vote_count}</div>
                 </div>
+
                 <div>
-                    <div> {genres && genres.map(value => <div> {value.name} </div>)}</div>
+                    {genres && genres.map(value => <div> ganre - {value.name} </div>)}
                 </div>
             </div>
 
-            <div><a href={Collection}> {Collection}</a></div>
+            <div className={'genre-movie-btn'}>
 
-            <NavLink to={'/'}>
-                <button className={'movie-info-btn'}>Home Page</button>
-            </NavLink>
+                <a href={Collection}> {Collection}</a>
+
+                <NavLink to={'/'}>
+                    <button>Back</button>
+                </NavLink>
+
+            </div>
         </div>
     );
 };

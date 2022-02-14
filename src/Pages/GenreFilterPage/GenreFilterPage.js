@@ -1,8 +1,10 @@
 import React, {useCallback, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+
 import {getGenresFilterById} from "../../Slices";
 import MovieList from "../../Components/MoviesList/MovieList";
+import genreFilterPage from "./genreFilterPage.css"
 
 const GenreFilterPage = () => {
 
@@ -26,13 +28,22 @@ const GenreFilterPage = () => {
     }, [page]);
 
     return (
-        <div>
-            {results && results.map(movie => <MovieList key={movie.id} movie={movie}/> )}
 
-            <button onClick={submitBack}> Back </button>
-            <button onClick={submitNext}> Next </button>
+        <div className={'genre-filter-page-full'}>
+            <div className={'genre-filter-page'}>
+                <div className={'genre-filter-page1'}>
+
+                {results && results.map(movie => <MovieList key={movie.id} movie={movie}/>)}
+
+                </div>
+            </div>
+
+            <div className={'genre-filter-page-btn'}>
+                <button onClick={submitBack} className={'btn-genre'}> Back</button>
+                <button onClick={submitNext} className={'btn-genre'}> Next</button>
+            </div>
+
         </div>
-
     );
 };
 

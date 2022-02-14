@@ -4,20 +4,28 @@ import {Outlet} from "react-router-dom";
 
 import {getAllGenres} from "../../Slices";
 import GenreList from "../../Components/GenreList/GenreList";
+import genrePage from "./genrePage.css"
 
 const GenrePage = () => {
 
-    const {genres} = useSelector(store =>store.genre);
-  const dispatch = useDispatch();
+    const {genres} = useSelector(store => store.genre);
+    const dispatch = useDispatch();
 
-    useEffect(()=>{
-      dispatch(getAllGenres(genres))
-  },[])
+    useEffect(() => {
+        dispatch(getAllGenres(genres))
+    }, [])
 
     return (
-        <div>
-            {genres && genres.map(genre =><GenreList key={genre.id} genre={genre}/>)}
+
+        <div className={'genre-page-full'}>
+            <div className={'genre-page-full'}>
+
+                {genres && genres.map(genre => <GenreList key={genre.id} genre={genre}/>)}
+
+            </div>
+
             <Outlet/>
+
         </div>
 
     );
